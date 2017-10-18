@@ -10,6 +10,7 @@ function Movement(x, y, dir) {
   // sets the next home
   var xPlane = x;
   var yPlane = y;
+  // checks input
   switch (dir) {
     case(">"):
       xPlane = x + 1;
@@ -24,4 +25,12 @@ function Movement(x, y, dir) {
       yPlane = y - 1;
       break;
   }
+
+  const key = `(${x}, ${y})`;
+  if (visitedHomes[key]) {
+    visitedHomes[key] += 1;
+    // statement checks whether or not a home has been visited
+  } else {
+    visitedHomes[key] = 1;
+  } return [x, y];
 }
