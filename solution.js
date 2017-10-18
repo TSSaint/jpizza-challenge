@@ -34,3 +34,16 @@ function Movement(x, y, dir) {
     visitedHomes[key] = 1;
   } return [x, y];
 }
+
+// start collection/traveling through data
+function Deliver(dir, x, y) {
+  if (dir.length) {
+    // if dir has some length
+    var dir = dirs.shift();
+    var newLoc = Move(x, y, dir);
+    const xPlane = newLoc[0];
+    const yPlane = newLoc[1];
+    Deliver(dirs, xPlane, yPlane);
+  }
+}
+
