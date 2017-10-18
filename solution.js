@@ -15,7 +15,7 @@ function Movement(x, y, dir) {
     case(">"):
       xPlane = x + 1;
       break;
-    case("^"):
+    case("<"):
       xPlane = x - 1;
       break;
     case("^"):
