@@ -26,13 +26,13 @@ function Movement(x, y, dir) {
       break;
   }
 
-  const key = `(${x}, ${y})`;
+  const key = `(${xPlane}, ${yPlane})`;
   if (visitedHomes[key]) {
     visitedHomes[key] += 1;
     // statement checks whether or not a home has been visited
   } else {
     visitedHomes[key] = 1;
-  } return [x, y];
+  } return [xPlane, yPlane];
 }
 
 // start collection/traveling through data
