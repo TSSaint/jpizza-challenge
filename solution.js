@@ -37,7 +37,7 @@ function Movement(x, y, dir) {
 
 // start collection/traveling through data
 function Deliver(dirs, x, y) {
-  if (dir.length) {
+  if (dirs.length) {
     // if dir has some length
     var dir = dirs.shift();
     // create and add to dirs array
